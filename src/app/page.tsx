@@ -11,7 +11,7 @@ export default function Home() {
             Available for work
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight text-gray-900 dark:text-white">
-            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Your Name</span>
+            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Sasidhar</span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
             A creative Full Stack Developer crafting beautiful, intuitive, and robust web experiences. 
@@ -52,11 +52,11 @@ export default function Home() {
         <h2 className="text-center text-sm font-bold text-gray-400 uppercase tracking-widest mb-8">Tech Stack & Tools</h2>
         <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
            {/* You can replace these with SVG icons */}
-           <span className="text-xl font-bold hover:scale-110 transform transition-transform duration-200 cursor-default">React</span>
+           <span className="text-xl font-bold hover:scale-110 transform transition-transform duration-200 cursor-default">Python</span>
+           <span className="text-xl font-bold hover:scale-110 transform transition-transform duration-200 cursor-default">C/C++</span>
            <span className="text-xl font-bold hover:scale-110 transform transition-transform duration-200 cursor-default">Next.js</span>
-           <span className="text-xl font-bold hover:scale-110 transform transition-transform duration-200 cursor-default">TypeScript</span>
-           <span className="text-xl font-bold hover:scale-110 transform transition-transform duration-200 cursor-default">Tailwind</span>
-           <span className="text-xl font-bold hover:scale-110 transform transition-transform duration-200 cursor-default">Node.js</span>
+           <span className="text-xl font-bold hover:scale-110 transform transition-transform duration-200 cursor-default">FastAPI</span>
+           <span className="text-xl font-bold hover:scale-110 transform transition-transform duration-200 cursor-default">Cybersecurity</span>
         </div>
       </section>
     </div>

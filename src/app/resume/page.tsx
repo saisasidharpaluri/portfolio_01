@@ -18,90 +18,111 @@ export default function Resume() {
       <div className="bg-white dark:bg-gray-800 shadow-lg rounded-lg p-8 border border-gray-200 dark:border-gray-700">
         {/* Header */}
         <div className="border-b border-gray-200 dark:border-gray-700 pb-6 mb-6">
-          <h2 className="text-3xl font-bold mb-2">Your Name</h2>
-          <p className="text-gray-600 dark:text-gray-400 mb-2">Full Stack Developer</p>
+          <h2 className="text-3xl font-bold mb-2">Paluri Sai Sasidhar</h2>
+          <p className="text-gray-600 dark:text-gray-400 mb-2">Computer Science Student | Cybersecurity Enthusiast</p>
           <div className="flex flex-wrap gap-4 text-sm text-gray-500 dark:text-gray-400">
-            <span>📍 City, Country</span>
-            <span>📧 email@example.com</span>
-            <span>🔗 linkedin.com/in/yourprofile</span>
-            <span>🐙 github.com/yourusername</span>
-          </div>
-        </div>
-
-        {/* Summary */}
-        <div className="mb-8">
-          <h3 className="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 uppercase tracking-wide">Professional Summary</h3>
-          <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
-            Passionate and results-driven Full Stack Developer with experience in building scalable web applications. 
-            Proficient in modern frontend technologies like React and Next.js, as well as backend development with Node.js. 
-            Demonstrated ability to solve complex problems and deliver high-quality code.
-          </p>
-        </div>
-
-        {/* Experience */}
-        <div className="mb-8">
-          <h3 className="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 uppercase tracking-wide">Experience</h3>
-          
-          <div className="mb-6">
-            <div className="flex justify-between items-baseline mb-2">
-              <h4 className="text-lg font-bold">Senior Frontend Developer</h4>
-              <span className="text-sm text-gray-500 dark:text-gray-400">Jan 2024 - Present</span>
-            </div>
-            <p className="text-gray-600 dark:text-gray-400 mb-2 font-medium">Tech Company Inc.</p>
-            <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
-              <li>Led the migration of the legacy codebase to Next.js, improving site performance by 40%.</li>
-              <li>Collaborated with UX/UI designers to implement responsive design patterns.</li>
-              <li>Mentored junior developers and conducted code reviews to ensure code quality.</li>
-            </ul>
-          </div>
-
-          <div className="mb-6">
-            <div className="flex justify-between items-baseline mb-2">
-              <h4 className="text-lg font-bold">Web Developer</h4>
-              <span className="text-sm text-gray-500 dark:text-gray-400">Jun 2022 - Dec 2023</span>
-            </div>
-            <p className="text-gray-600 dark:text-gray-400 mb-2 font-medium">Digital Agency</p>
-            <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 space-y-1">
-              <li>Developed and maintained client websites using React and Tailwind CSS.</li>
-              <li>Integrated third-party APIs for payment processing and content management.</li>
-              <li>Optimized application performance and accessibility score.</li>
-            </ul>
+            <span>📍 Gwalior, Madhya Pradesh</span>
+            <span>📧 [Email Address]</span>
+            <span>🔗 [LinkedIn Profile]</span>
+            <span>🐙 [GitHub Profile]</span>
           </div>
         </div>
 
         {/* Education */}
         <div className="mb-8">
           <h3 className="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 uppercase tracking-wide">Education</h3>
-          <div className="mb-4">
-            <div className="flex justify-between items-baseline mb-1">
-              <h4 className="text-lg font-bold">Bachelor of Science in Computer Science</h4>
-              <span className="text-sm text-gray-500 dark:text-gray-400">2018 - 2022</span>
+          <div>
+            <div className="flex justify-between items-baseline mb-2">
+              <h4 className="text-lg font-bold">Indian Institute of Information Technology & Management</h4>
+              <span className="text-sm text-gray-500 dark:text-gray-400">June 2023 – Expected May 2027</span>
             </div>
-            <p className="text-gray-600 dark:text-gray-400">University of Technology</p>
+            <p className="text-gray-600 dark:text-gray-400 mb-2 font-medium">B.Tech in Computer Science and Engineering</p>
+            <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm space-y-1">
+                <li><span className="font-semibold">Relevant Coursework:</span> Data Structures, Operating Systems, DBMS (SQL), Cryptography, Network Security, VAPT, Digital Forensics, AI in Cybersecurity.</li>
+            </ul>
+          </div>
+        </div>
+
+        {/* Projects */}
+        <div className="mb-8">
+          <h3 className="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 uppercase tracking-wide">Projects</h3>
+          
+          <div className="mb-6">
+            <div className="flex justify-between items-baseline mb-2">
+              <h4 className="text-lg font-bold">NetHunter: Network Vulnerability Scanner</h4>
+              <span className="text-sm text-gray-500 dark:text-gray-400">Dec 2025</span>
+            </div>
+            <p className="text-sm text-blue-500 dark:text-blue-400 mb-2">Python, FastAPI, Next.js, Nmap, SQLite</p>
+            <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm space-y-1">
+              <li>Engineered a production-grade network reconnaissance tool using Python and Nmap.</li>
+              <li>Architected a full-stack dashboard with Next.js 15 and FastAPI for real-time visualization.</li>
+              <li>Implemented CVE lookup logic for actionable security insights.</li>
+            </ul>
+          </div>
+
+          <div className="mb-6">
+            <div className="flex justify-between items-baseline mb-2">
+              <h4 className="text-lg font-bold">AI-Powered Phishing & Spam Detection Engine</h4>
+              <span className="text-sm text-gray-500 dark:text-gray-400">Nov 2025 - Dec 2025</span>
+            </div>
+             <p className="text-sm text-blue-500 dark:text-blue-400 mb-2">Python, Scikit-Learn, NLP, Flask</p>
+            <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm space-y-1">
+              <li>Developed a classification system to detect phishing/spam using NLP (TF-IDF).</li>
+              <li>Achieved 98%+ accuracy with ML models (Naive Bayes, SVM, Random Forest).</li>
+              <li>Integrated real-time verification web interface using Flask.</li>
+            </ul>
           </div>
         </div>
 
         {/* Skills */}
-        <div>
+        <div className="mb-8">
           <h3 className="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 uppercase tracking-wide">Technical Skills</h3>
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-            <div>
-              <h4 className="font-bold text-gray-700 dark:text-gray-300 mb-2">Languages & Core</h4>
-              <p className="text-gray-600 dark:text-gray-400">JavaScript (ES6+), TypeScript, HTML5, CSS3, Python, Java</p>
-            </div>
-            <div>
-              <h4 className="font-bold text-gray-700 dark:text-gray-300 mb-2">Frameworks & Libraries</h4>
-              <p className="text-gray-600 dark:text-gray-400">React, Next.js, Redux, Tailwind CSS, Node.js, Express</p>
-            </div>
-            <div>
-              <h4 className="font-bold text-gray-700 dark:text-gray-300 mb-2">Tools & Platforms</h4>
-              <p className="text-gray-600 dark:text-gray-400">Git, GitHub, VS Code, Vercel, Docker, Figma</p>
-            </div>
-            <div>
-              <h4 className="font-bold text-gray-700 dark:text-gray-300 mb-2">Databases</h4>
-              <p className="text-gray-600 dark:text-gray-400">PostgreSQL, MongoDB, Supabase, Firebase</p>
-            </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 text-sm text-gray-700 dark:text-gray-300">
+             <div>
+                 <span className="font-bold block mb-1">Languages:</span>
+                 C/C++, Python, Java, HTML, CSS, Javascript, SQL
+             </div>
+             <div>
+                 <span className="font-bold block mb-1">Databases:</span>
+                 MySQL, Postgre SQL
+             </div>
+             <div className="md:col-span-2">
+                 <span className="font-bold block mb-1">Tools:</span>
+                 VS Code, Git, Latex, Wireshark, Splunk, Linux CLI, Nmap, Burpsuite, John the ripper, Metasploit
+             </div>
           </div>
+        </div>
+
+        {/* Leadership */}
+        <div className="mb-8">
+             <h3 className="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 uppercase tracking-wide">Leadership / Extracurricular</h3>
+             <div className="mb-4">
+                <div className="flex justify-between items-baseline mb-1">
+                    <h4 className="text-lg font-bold">Member of Student Activity Council (Cultural)</h4>
+                    <span className="text-sm text-gray-500 dark:text-gray-400">2024 - 2025</span>
+                </div>
+                 <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm space-y-1">
+                    <li>Organized Janmashtami celebration and coordinated cultural programming.</li>
+                    <li>Contributed to "Aurora" festival (IPL Auction, Pictionary competition).</li>
+                    <li>Served as a core organizer for Orientation Week.</li>
+                </ul>
+             </div>
+             {/* Sports could go here or separate */}
+        </div>
+        
+         {/* Certifications and Sports */}
+        <div>
+             <h3 className="text-xl font-bold mb-4 text-blue-600 dark:text-blue-400 uppercase tracking-wide">Certifications & Interests</h3>
+             <ul className="list-disc list-inside text-gray-700 dark:text-gray-300 text-sm space-y-1 mb-4">
+                 <li>Cybersecurity Fundamentals by IBM</li>
+                 <li>Google Cybersecurity Professional Certificate</li>
+                 <li>Datacom Cybersecurity Job Simulation</li>
+                 <li>Tata Cybersecurity Security Analyst Job Simulation</li>
+                 <li>Achieved a rank of 8741 in JEE Mains 2023</li>
+             </ul>
+             <div className="text-sm text-gray-700 dark:text-gray-300">
+                <span className="font-bold">Sports:</span> Black Belt Karateka (Gold/Silver medalist), Competitive Swimmer.
+             </div>
         </div>
       </div>
     </div>

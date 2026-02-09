@@ -3,36 +3,20 @@ import Link from "next/link";
 export default function Projects() {
   const projects = [
     {
-      title: "E-Commerce Dashboard",
-      description: "A comprehensive dashboard for managing products, orders, and customers. Features include real-time analytics, inventory management, and user roles.",
-      tech: ["Next.js", "TypeScript", "Tailwind CSS", "Supabase"],
+      title: "NetHunter: Network Vulnerability Scanner",
+      description: "Engineered a production-grade network reconnaissance tool using Python and the Nmap library to automate the identification of active hosts, open ports, and service versions. Architected a full-stack dashboard with Next.js 15 and FastAPI, integrating real-time scan progress visualization and a centralized SQLite database. Implemented CVE lookup logic to transform scanning data into actionable security insights.",
+      tech: ["Python", "FastAPI", "Next.js", "Nmap", "SQLite"],
       link: "#",
       github: "#",
-      color: "from-blue-500 to-cyan-400"
+      color: "from-blue-600 to-indigo-600"
     },
     {
-      title: "Task Management App",
-      description: "A collaborative task management tool with drag-and-drop boards, real-time updates via WebSockets, and team workspaces.",
-      tech: ["React", "Node.js", "Socket.io", "MongoDB"],
+      title: "AI-Powered Phishing & Spam Detection Engine",
+      description: "Developed an intelligent classification system to detect malicious phishing attempts and spam emails using NLP techniques like Tokenization and TF-IDF. Trained Machine Learning models (Naive Bayes, SVM, Random Forest) achieving 98%+ accuracy. Integrated a real-time web interface using Flask for user verification of suspicious content.",
+      tech: ["Python", "Scikit-Learn", "NLP", "Flask", "ML"],
       link: "#",
       github: "#",
-      color: "from-purple-500 to-indigo-500"
-    },
-    {
-      title: "Weather Forecast",
-      description: "A beautiful weather application providing detailed 7-day forecasts, hourly updates, and location-based weather data.",
-      tech: ["Vue.js", "OpenWeatherMap API", "Chart.js"],
-      link: "#",
-      github: "#",
-      color: "from-orange-400 to-pink-500"
-    },
-    {
-      title: "AI Image Generator",
-      description: "An interface for generating images using AI models. Users can input prompts and download high-resolution generated art.",
-      tech: ["Next.js", "OpenAI API", "AWS S3"],
-      link: "#",
-      github: "#",
-      color: "from-green-400 to-emerald-600"
+      color: "from-emerald-500 to-teal-600"
     }
   ];
 
