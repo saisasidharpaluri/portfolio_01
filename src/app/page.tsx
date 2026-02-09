@@ -35,12 +35,14 @@ export default function Home() {
         </div>
         
         <div className="flex-1 flex justify-center">
-            {/* Placeholder for Profile Image - Replace src with your image */}
-            <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-600">
-                {/* <Image src="/profile.jpg" alt="Profile" fill className="object-cover" /> */}
-                <span className="absolute inset-0 flex items-center justify-center text-gray-500 text-4xl">
-                   Image
-                </span>
+            <div className="relative w-64 h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-600 rotate-3 hover:rotate-0 transition-transform duration-300">
+                <Image 
+                  src="/my_photo_2.jpeg" 
+                  alt="Profile Photo" 
+                  fill 
+                  className="object-cover" 
+                  priority
+                />
             </div>
         </div>
       </section>
