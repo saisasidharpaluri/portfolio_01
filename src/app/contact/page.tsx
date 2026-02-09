@@ -12,8 +12,11 @@ export default function Contact() {
     e.preventDefault();
     const { name, email, message } = formData;
     const subject = `Portfolio Contact from ${name}`;
-    const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
-    window.location.href = `mailto:palurissd@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
+    
+    const mailtoLink = `mailto:palurissd@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+    
+    window.location.href = mailtoLink;
   };
 
   const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
