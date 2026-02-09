@@ -22,9 +22,9 @@ export default function Resume() {
           <p className="text-gray-600 dark:text-gray-400 mb-2">Computer Science Student | Cybersecurity Enthusiast</p>
           <div className="flex flex-wrap gap-4 text-sm text-gray-500 dark:text-gray-400">
             <span>📍 Gwalior, Madhya Pradesh</span>
-            <span>📧 [Email Address]</span>
-            <span>🔗 [LinkedIn Profile]</span>
-            <span>🐙 [GitHub Profile]</span>
+            <span>📧 palurissd@gmail.com</span>
+            <span>🔗 <a href="https://www.linkedin.com/in/sai-sasidhar-paluri-896b43289/" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400 underline">LinkedIn Profile</a></span>
+            <span>🐙 <a href="https://github.com/saisasidharpaluri" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-blue-400 underline">GitHub Profile</a></span>
           </div>
         </div>
 
