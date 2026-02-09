@@ -1,4 +1,25 @@
+"use client";
+import { useState } from 'react';
+
 export default function Contact() {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    const { name, email, message } = formData;
+    const subject = `Portfolio Contact from ${name}`;
+    const body = `Name: ${name}%0D%0AEmail: ${email}%0D%0A%0D%0AMessage:%0D%0A${message}`;
+    window.location.href = `mailto:palurissd@gmail.com?subject=${encodeURIComponent(subject)}&body=${body}`;
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({ ...formData, [e.target.id]: e.target.value });
+  };
+
   return (
     <div className="max-w-5xl mx-auto py-12 px-4">
       <div className="text-center mb-16">
@@ -53,18 +74,42 @@ export default function Contact() {
         {/* Form */}
         <div className="bg-white dark:bg-gray-800 p-8 rounded-2xl shadow-lg border border-gray-100 dark:border-gray-700">
             <h3 className="text-2xl font-bold mb-6">Send a Message</h3>
-            <form className="space-y-6">
+            <form className="space-y-6" onSubmit={handleSubmit}>
                 <div>
                     <label htmlFor="name" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Name</label>
-                    <input type="text" id="name" className="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" placeholder="John Doe" required />
+                    <input 
+                      type="text" 
+                      id="name" 
+                      value={formData.name}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" 
+                      placeholder="John Doe" 
+                      required 
+                    />
                 </div>
                 <div>
                     <label htmlFor="email" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Email</label>
-                    <input type="email" id="email" className="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" placeholder="john@example.com" required />
+                    <input 
+                      type="email" 
+                      id="email" 
+                      value={formData.email}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors" 
+                      placeholder="john@example.com" 
+                      required 
+                    />
                 </div>
                 <div>
                     <label htmlFor="message" className="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-2">Message</label>
-                    <textarea id="message" rows={4} className="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors resize-none" placeholder="Your message here..." required></textarea>
+                    <textarea 
+                      id="message" 
+                      rows={4} 
+                      value={formData.message}
+                      onChange={handleChange}
+                      className="w-full px-4 py-3 rounded-lg bg-gray-50 dark:bg-gray-700 border border-gray-200 dark:border-gray-600 focus:outline-none focus:ring-2 focus:ring-blue-500 transition-colors resize-none" 
+                      placeholder="Your message here..." 
+                      required
+                    ></textarea>
                 </div>
                 <button type="submit" className="w-full bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-lg transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-blue-500/30">
                     Send Message
