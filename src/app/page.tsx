@@ -11,11 +11,10 @@ export default function Home() {
             Available for work
           </div>
           <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight text-gray-900 dark:text-white">
-            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Sasidhar</span>
+            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Paluri Sai Sasidhar</span>
           </h1>
           <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            A creative Full Stack Developer crafting beautiful, intuitive, and robust web experiences. 
-            Specializing in the React ecosystem and modern web performance.
+            Computer Science student at IIITM Gwalior specializing in AI/ML & Systems Engineering, GenAI RAG Pipelines, TensorRT inference optimization, and high-performance full-stack architectures.
           </p>
           
           <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
@@ -49,14 +48,13 @@ export default function Home() {
 
       {/* Featured Skills Snippet */}
       <section className="py-16 border-t border-gray-100 dark:border-gray-800">
-        <h2 className="text-center text-sm font-bold text-gray-400 uppercase tracking-widest mb-8">Tech Stack & Tools</h2>
-        <div className="flex flex-wrap justify-center gap-8 md:gap-16 opacity-70 grayscale hover:grayscale-0 transition-all duration-500">
-           {/* You can replace these with SVG icons */}
-           <span className="text-xl font-bold hover:scale-110 transform transition-transform duration-200 cursor-default">Python</span>
-           <span className="text-xl font-bold hover:scale-110 transform transition-transform duration-200 cursor-default">C/C++</span>
-           <span className="text-xl font-bold hover:scale-110 transform transition-transform duration-200 cursor-default">Next.js</span>
-           <span className="text-xl font-bold hover:scale-110 transform transition-transform duration-200 cursor-default">FastAPI</span>
-           <span className="text-xl font-bold hover:scale-110 transform transition-transform duration-200 cursor-default">Cybersecurity</span>
+        <h2 className="text-center text-sm font-bold text-gray-400 uppercase tracking-widest mb-8">Tech Stack & Core Capabilities</h2>
+        <div className="flex flex-wrap justify-center gap-6 md:gap-12 opacity-80 hover:opacity-100 transition-all duration-500">
+           <span className="px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full font-semibold hover:scale-105 transform transition-transform duration-200 cursor-default">PyTorch & vLLM</span>
+           <span className="px-4 py-2 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 rounded-full font-semibold hover:scale-105 transform transition-transform duration-200 cursor-default">TensorRT & CUDA</span>
+           <span className="px-4 py-2 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full font-semibold hover:scale-105 transform transition-transform duration-200 cursor-default">Python & C++</span>
+           <span className="px-4 py-2 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded-full font-semibold hover:scale-105 transform transition-transform duration-200 cursor-default">FastAPI & Next.js</span>
+           <span className="px-4 py-2 bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-full font-semibold hover:scale-105 transform transition-transform duration-200 cursor-default">Docker & gRPC</span>
         </div>
       </section>
     </div>
