@@ -1,62 +1,152 @@
 import Link from "next/link";
 import Image from "next/image";
+import { TechIcon } from "@/components/TechIcons";
+import { ArrowRight, Sparkles, Cpu, Zap, Code, ShieldCheck, Terminal, Brain, Award } from "lucide-react";
 
 export default function Home() {
+  const featuredTech = [
+    { name: "PyTorch", category: "Deep Learning" },
+    { name: "TensorRT", category: "GPU Acceleration" },
+    { name: "CUDA", category: "Parallel Computing" },
+    { name: "vLLM", category: "GenAI & LLMs" },
+    { name: "Python", category: "Core Language" },
+    { name: "C++", category: "High Performance" },
+    { name: "FastAPI", category: "Async Backends" },
+    { name: "Next.js", category: "Full-Stack Web" },
+    { name: "Docker", category: "Containerization" },
+    { name: "Redis", category: "Vector Caching" },
+    { name: "gRPC", category: "Microservices" },
+    { name: "Git/GitHub", category: "Version Control" },
+  ];
+
+  const metrics = [
+    { label: "AIR JEE Mains 2023", value: "8,741", subtext: "Top 0.8% out of 1.2M+", icon: Award, color: "text-amber-500" },
+    { label: "TensorRT Latency Cut", value: "68%", subtext: "YOLOv8 Edge Acceleration", icon: Zap, color: "text-cyan-500" },
+    { label: "Inference Throughput", value: "1,200+", subtext: "Requests / Sec in C++", icon: Cpu, color: "text-blue-500" },
+    { label: "CodeChef / LeetCode", value: "1760 / 1650", subtext: "Peak Competitive Rating", icon: Code, color: "text-purple-500" },
+  ];
+
   return (
-    <div className="flex flex-col min-h-[calc(100vh-80px)]">
+    <div className="relative overflow-hidden min-h-[calc(100vh-80px)] pt-12 pb-16 px-4 sm:px-6">
+      
+      {/* Background Radial Glow Orbs */}
+      <div className="absolute top-1/4 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] bg-gradient-to-tr from-blue-600/15 via-cyan-500/15 to-purple-600/10 rounded-full blur-3xl pointer-events-none -z-10 animate-pulse-glow" />
+      <div className="absolute bottom-10 right-10 w-[400px] h-[400px] bg-cyan-500/10 rounded-full blur-3xl pointer-events-none -z-10" />
+
       {/* Hero Section */}
-      <section className="flex-1 flex flex-col md:flex-row items-center justify-center py-20 gap-12">
-        <div className="flex-1 max-w-xl text-center md:text-left">
-          <div className="inline-block px-3 py-1 mb-4 text-sm font-semibold tracking-wider text-blue-600 uppercase bg-blue-100 rounded-full dark:bg-blue-900 dark:text-blue-300">
-            Available for work
-          </div>
-          <h1 className="text-5xl md:text-6xl font-extrabold mb-6 tracking-tight text-gray-900 dark:text-white">
-            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 to-cyan-500">Paluri Sai Sasidhar</span>
-          </h1>
-          <p className="text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed">
-            Computer Science student at IIITM Gwalior specializing in AI/ML & Systems Engineering, GenAI RAG Pipelines, TensorRT inference optimization, and high-performance full-stack architectures.
-          </p>
+      <section className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-12 lg:gap-16 pt-8 pb-16">
+        
+        {/* Left Column: Headline & Info */}
+        <div className="flex-1 text-center lg:text-left">
           
-          <div className="flex flex-col sm:flex-row gap-4 justify-center md:justify-start">
+          {/* Status Badge */}
+          <div className="inline-flex items-center gap-2 px-4 py-1.5 mb-6 text-xs font-bold tracking-wider uppercase rounded-full bg-blue-50 dark:bg-blue-950/60 text-blue-700 dark:text-cyan-300 border border-blue-200/60 dark:border-cyan-500/30 shadow-sm">
+            <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
+            <span className="w-2 h-2 rounded-full bg-emerald-500 -ml-4" />
+            Available for AI/ML & Systems Engineering Roles
+          </div>
+
+          <h1 className="text-4xl sm:text-5xl lg:text-6xl font-extrabold mb-6 tracking-tight leading-[1.15] text-gray-900 dark:text-white">
+            Hi, I'm <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-600 via-cyan-500 to-indigo-500">Paluri Sai Sasidhar</span>
+          </h1>
+
+          <p className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 mb-8 leading-relaxed max-w-2xl mx-auto lg:mx-0 font-normal">
+            Computer Science student at <span className="font-semibold text-gray-900 dark:text-white">IIITM Gwalior</span> specializing in <span className="font-semibold text-blue-600 dark:text-cyan-400">Artificial Intelligence</span>, TensorRT inference optimization, Multimodal RAG search pipelines, and high-throughput C++/Python model serving engines.
+          </p>
+
+          <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
             <Link 
               href="/projects" 
-              className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-3 px-8 rounded-full transition-all duration-300 transform hover:-translate-y-1 shadow-lg hover:shadow-blue-500/30 text-center"
+              className="inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-bold py-3.5 px-8 rounded-2xl transition-all duration-300 transform hover:-translate-y-0.5 shadow-lg shadow-blue-500/25 text-base"
             >
-              View My Work
+              Explore Projects <ArrowRight className="w-4 h-4" />
             </Link>
+            
             <Link 
               href="/resume" 
-              className="bg-white dark:bg-gray-800 text-gray-800 dark:text-white border-2 border-gray-200 dark:border-gray-700 hover:border-blue-600 dark:hover:border-blue-500 font-bold py-3 px-8 rounded-full transition-all duration-300 text-center"
+              className="inline-flex items-center justify-center gap-2 glass-card hover:bg-gray-100 dark:hover:bg-gray-800/80 text-gray-900 dark:text-white font-bold py-3.5 px-8 rounded-2xl transition-all duration-300 text-base"
             >
               Check Resume
             </Link>
           </div>
         </div>
-        
-        <div className="flex-1 flex justify-center">
-            <div className="relative w-64 h-80 md:w-80 md:h-96 rounded-2xl overflow-hidden border-4 border-white dark:border-gray-800 shadow-2xl bg-gradient-to-br from-gray-200 to-gray-300 dark:from-gray-700 dark:to-gray-600 rotate-3 hover:rotate-0 transition-transform duration-300">
-                <Image 
-                  src="/my_photo_2.jpeg" 
-                  alt="Profile Photo" 
-                  fill 
-                  className="object-cover" 
-                  priority
-                />
+
+        {/* Right Column: Profile Photo Frame */}
+        <div className="flex-1 flex justify-center lg:justify-end">
+          <div className="relative group">
+            {/* Glowing Border Backdrop */}
+            <div className="absolute -inset-1 bg-gradient-to-r from-blue-600 via-cyan-500 to-purple-600 rounded-3xl blur-md opacity-70 group-hover:opacity-100 transition duration-500 group-hover:scale-105" />
+            
+            <div className="relative w-64 h-80 sm:w-72 sm:h-96 rounded-2xl overflow-hidden border-4 border-white dark:border-gray-900 shadow-2xl bg-gray-900">
+              <Image 
+                src="/my_photo_2.jpeg" 
+                alt="Paluri Sai Sasidhar" 
+                fill 
+                className="object-cover group-hover:scale-105 transition-transform duration-500" 
+                priority
+              />
+              
+              {/* Overlay Glass Tag */}
+              <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl glass-card backdrop-blur-lg flex items-center gap-3">
+                <div className="p-2 rounded-lg bg-blue-600 text-white">
+                  <Brain className="w-5 h-5" />
+                </div>
+                <div className="flex flex-col">
+                  <span className="text-xs font-bold text-gray-900 dark:text-white">AI Intern @ Tecdatum</span>
+                  <span className="text-[10px] text-gray-500 dark:text-gray-400 font-medium">NVIDIA Jetson & TensorRT</span>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
       </section>
 
-      {/* Featured Skills Snippet */}
-      <section className="py-16 border-t border-gray-100 dark:border-gray-800">
-        <h2 className="text-center text-sm font-bold text-gray-400 uppercase tracking-widest mb-8">Tech Stack & Core Capabilities</h2>
-        <div className="flex flex-wrap justify-center gap-6 md:gap-12 opacity-80 hover:opacity-100 transition-all duration-500">
-           <span className="px-4 py-2 bg-blue-50 dark:bg-blue-900/30 text-blue-700 dark:text-blue-300 rounded-full font-semibold hover:scale-105 transform transition-transform duration-200 cursor-default">PyTorch & vLLM</span>
-           <span className="px-4 py-2 bg-cyan-50 dark:bg-cyan-900/30 text-cyan-700 dark:text-cyan-300 rounded-full font-semibold hover:scale-105 transform transition-transform duration-200 cursor-default">TensorRT & CUDA</span>
-           <span className="px-4 py-2 bg-purple-50 dark:bg-purple-900/30 text-purple-700 dark:text-purple-300 rounded-full font-semibold hover:scale-105 transform transition-transform duration-200 cursor-default">Python & C++</span>
-           <span className="px-4 py-2 bg-emerald-50 dark:bg-emerald-900/30 text-emerald-700 dark:text-emerald-300 rounded-full font-semibold hover:scale-105 transform transition-transform duration-200 cursor-default">FastAPI & Next.js</span>
-           <span className="px-4 py-2 bg-amber-50 dark:bg-amber-900/30 text-amber-700 dark:text-amber-300 rounded-full font-semibold hover:scale-105 transform transition-transform duration-200 cursor-default">Docker & gRPC</span>
+      {/* Impact Metrics Bar */}
+      <section className="max-w-7xl mx-auto my-12">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6">
+          {metrics.map((m, idx) => {
+            const Icon = m.icon;
+            return (
+              <div key={idx} className="glass-card p-6 rounded-2xl flex flex-col justify-between hover:scale-[1.02] transition-transform duration-300 shadow-sm hover:shadow-md">
+                <div className="flex items-center justify-between mb-3">
+                  <span className="text-xs font-bold text-gray-500 dark:text-gray-400 uppercase tracking-wider">{m.label}</span>
+                  <Icon className={`w-5 h-5 ${m.color}`} />
+                </div>
+                <span className="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white tracking-tight mb-1">{m.value}</span>
+                <span className="text-xs text-gray-500 dark:text-gray-400 font-medium">{m.subtext}</span>
+              </div>
+            );
+          })}
         </div>
       </section>
+
+      {/* Tech Stack & Core Capabilities */}
+      <section className="max-w-7xl mx-auto my-16">
+        <div className="text-center mb-10">
+          <h2 className="text-sm font-bold text-blue-600 dark:text-cyan-400 uppercase tracking-widest mb-2 flex items-center justify-center gap-2">
+            <Sparkles className="w-4 h-4" /> Tech Stack & Core Capabilities
+          </h2>
+          <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white">
+            Engineered with Modern Industry Standards
+          </h3>
+        </div>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4">
+          {featuredTech.map((tech) => (
+            <div 
+              key={tech.name}
+              className="glass-card p-4 rounded-2xl flex flex-col items-center justify-center text-center gap-2 hover:-translate-y-1 hover:border-blue-500/50 hover:shadow-lg transition-all duration-300 cursor-default group"
+            >
+              <div className="p-2.5 rounded-xl bg-gray-100 dark:bg-gray-800/80 group-hover:scale-110 transition-transform">
+                <TechIcon name={tech.name} className="w-7 h-7" />
+              </div>
+              <span className="text-sm font-bold text-gray-900 dark:text-white">{tech.name}</span>
+              <span className="text-[10px] text-gray-500 dark:text-gray-400 font-medium">{tech.category}</span>
+            </div>
+          ))}
+        </div>
+      </section>
+
     </div>
   );
 }
