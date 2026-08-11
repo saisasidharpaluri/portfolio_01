@@ -85,17 +85,6 @@ export default function Home() {
                 className="object-cover group-hover:scale-105 transition-transform duration-500" 
                 priority
               />
-              
-              {/* Overlay Glass Tag */}
-              <div className="absolute bottom-4 left-4 right-4 p-3 rounded-xl glass-card backdrop-blur-lg flex items-center gap-3">
-                <div className="p-2 rounded-lg bg-blue-600 text-white">
-                  <Brain className="w-5 h-5" />
-                </div>
-                <div className="flex flex-col">
-                  <span className="text-xs font-bold text-gray-900 dark:text-white">AI Intern @ Tecdatum</span>
-                  <span className="text-[10px] text-gray-500 dark:text-gray-400 font-medium">NVIDIA Jetson & TensorRT</span>
-                </div>
-              </div>
             </div>
           </div>
         </div>

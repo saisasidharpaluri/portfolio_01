@@ -80,15 +80,13 @@ export default function Resume() {
         {/* Projects */}
         <div className="mb-10">
           <h3 className="text-lg font-extrabold uppercase tracking-wider text-blue-600 dark:text-cyan-400 mb-4 flex items-center gap-2 border-b border-gray-200/60 dark:border-gray-800/60 pb-2">
-            <Code className="w-5 h-5" /> Flagship Open-Source Projects
+            <Code className="w-5 h-5" /> Flagship Projects
           </h3>
           
           <div className="mb-6">
             <div className="flex flex-col sm:flex-row sm:justify-between items-baseline mb-1">
-              <h4 className="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
-                <a href="https://github.com/saisasidharpaluri/vision-rag-engine" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">
-                  Multimodal Vision RAG Engine & Search Pipeline 🔗
-                </a>
+              <h4 className="text-base font-bold text-gray-900 dark:text-white">
+                Multimodal Vision RAG Engine & Search Pipeline
               </h4>
               <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">July 2026</span>
             </div>
@@ -103,10 +101,8 @@ export default function Resume() {
 
           <div className="mb-6">
             <div className="flex flex-col sm:flex-row sm:justify-between items-baseline mb-1">
-              <h4 className="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
-                <a href="https://github.com/saisasidharpaluri/nexus-engine" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">
-                  High-Throughput AI Inference & Quantization Engine (nexus-engine) 🔗
-                </a>
+              <h4 className="text-base font-bold text-gray-900 dark:text-white">
+                High-Throughput AI Inference & Quantization Engine
               </h4>
               <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">Aug 2026</span>
             </div>
@@ -140,7 +136,7 @@ export default function Resume() {
             <Award className="w-5 h-5" /> Achievements & Certifications
           </h3>
           <ul className="list-disc list-outside ml-4 text-xs sm:text-sm text-gray-600 dark:text-gray-300 space-y-1.5 leading-relaxed">
-            <li>Active competitive programmer with peak rating of <a href="https://www.codechef.com/users/sasidhar_07" target="_blank" rel="noopener noreferrer" className="font-bold text-amber-700 dark:text-amber-400 hover:underline">1760 on CodeChef (@sasidhar_07)</a> and <a href="https://leetcode.com/u/0HmlnBA2pz/" target="_blank" rel="noopener noreferrer" className="font-bold text-amber-600 dark:text-amber-400 hover:underline">1650 on LeetCode (@0HmlnBA2pz)</a>.</li>
+            <li>Active competitive programmer with peak rating of <a href="https://www.codechef.com/users/sasidhar_07" target="_blank" rel="noopener noreferrer" className="font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-cyan-400">1760 on CodeChef</a> and <a href="https://leetcode.com/u/0HmlnBA2pz/" target="_blank" rel="noopener noreferrer" className="font-semibold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-cyan-400">1650 on LeetCode</a>.</li>
             <li>Achieved an <strong className="text-gray-900 dark:text-white">All India Rank (AIR) of 8741 in JEE Mains 2023</strong> (Top 0.8% out of 1.2M+ candidates).</li>
             <li>Earned Google Cybersecurity Professional Certificate and IBM Cybersecurity Fundamentals.</li>
           </ul>
