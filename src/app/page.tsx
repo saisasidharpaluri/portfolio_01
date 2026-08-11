@@ -147,6 +147,67 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Competitive Programming Showcase Section */}
+      <section className="max-w-7xl mx-auto my-16">
+        <div className="glass-card p-8 sm:p-10 rounded-3xl border border-gray-200/70 dark:border-gray-800/80 shadow-xl">
+          <div className="flex flex-col md:flex-row md:items-center justify-between gap-6 mb-8">
+            <div>
+              <span className="text-xs font-bold text-amber-500 uppercase tracking-wider block mb-1">Algorithmic Mastery</span>
+              <h3 className="text-2xl sm:text-3xl font-extrabold text-gray-900 dark:text-white">Competitive Programming Profiles</h3>
+            </div>
+            <p className="text-sm text-gray-600 dark:text-gray-300 max-w-md">
+              Actively solving complex Data Structures & Algorithms challenges. Check out my official profiles below!
+            </p>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+            {/* LeetCode Card */}
+            <a 
+              href="https://leetcode.com/u/0HmlnBA2pz/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group p-6 rounded-2xl glass-card border border-amber-500/20 hover:border-amber-500/60 hover:shadow-lg transition-all duration-300 flex items-center justify-between"
+            >
+              <div className="flex items-center gap-4">
+                <div className="p-3.5 rounded-2xl bg-amber-500/10 text-amber-500 group-hover:scale-110 transition-transform">
+                  <TechIcon name="leetcode" className="w-8 h-8" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-amber-500 transition-colors">LeetCode Profile</h4>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">Username: @0HmlnBA2pz</p>
+                  <div className="inline-flex items-center gap-1.5 mt-2 px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-500/15 text-amber-600 dark:text-amber-400">
+                    ⚡ Peak Rating: 1650
+                  </div>
+                </div>
+              </div>
+              <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-amber-500 group-hover:translate-x-1 transition-all" />
+            </a>
+
+            {/* CodeChef Card */}
+            <a 
+              href="https://www.codechef.com/users/sasidhar_07" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className="group p-6 rounded-2xl glass-card border border-amber-700/20 hover:border-amber-700/60 hover:shadow-lg transition-all duration-300 flex items-center justify-between"
+            >
+              <div className="flex items-center gap-4">
+                <div className="p-3.5 rounded-2xl bg-amber-800/10 text-amber-700 dark:text-amber-500 group-hover:scale-110 transition-transform">
+                  <TechIcon name="codechef" className="w-8 h-8" />
+                </div>
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 dark:text-white group-hover:text-amber-600 dark:group-hover:text-amber-400 transition-colors">CodeChef Profile</h4>
+                  <p className="text-xs text-gray-500 dark:text-gray-400 font-medium">Username: @sasidhar_07</p>
+                  <div className="inline-flex items-center gap-1.5 mt-2 px-2.5 py-0.5 rounded-full text-xs font-extrabold bg-amber-700/15 text-amber-700 dark:text-amber-400">
+                    ⭐ Peak Rating: 1760 (3-Star)
+                  </div>
+                </div>
+              </div>
+              <ArrowRight className="w-5 h-5 text-gray-400 group-hover:text-amber-600 dark:group-hover:text-amber-400 group-hover:translate-x-1 transition-all" />
+            </a>
+          </div>
+        </div>
+      </section>
+
     </div>
   );
 }

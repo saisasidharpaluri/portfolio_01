@@ -140,7 +140,7 @@ export default function Resume() {
             <Award className="w-5 h-5" /> Achievements & Certifications
           </h3>
           <ul className="list-disc list-outside ml-4 text-xs sm:text-sm text-gray-600 dark:text-gray-300 space-y-1.5 leading-relaxed">
-            <li>Active competitive programmer with peak rating of <strong className="text-gray-900 dark:text-white">1760 on CodeChef</strong> and <strong className="text-gray-900 dark:text-white">1650 on LeetCode</strong>.</li>
+            <li>Active competitive programmer with peak rating of <a href="https://www.codechef.com/users/sasidhar_07" target="_blank" rel="noopener noreferrer" className="font-bold text-amber-700 dark:text-amber-400 hover:underline">1760 on CodeChef (@sasidhar_07)</a> and <a href="https://leetcode.com/u/0HmlnBA2pz/" target="_blank" rel="noopener noreferrer" className="font-bold text-amber-600 dark:text-amber-400 hover:underline">1650 on LeetCode (@0HmlnBA2pz)</a>.</li>
             <li>Achieved an <strong className="text-gray-900 dark:text-white">All India Rank (AIR) of 8741 in JEE Mains 2023</strong> (Top 0.8% out of 1.2M+ candidates).</li>
             <li>Earned Google Cybersecurity Professional Certificate and IBM Cybersecurity Fundamentals.</li>
           </ul>

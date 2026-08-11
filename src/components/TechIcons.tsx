@@ -184,6 +184,20 @@ export const TechIcon: React.FC<TechIconProps> = ({ name, className = "w-5 h-5",
           </svg>
         );
 
+      case 'leetcode':
+        return (
+          <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+            <path d="M13.483 0a1.374 1.374 0 0 0-.961.438L7.17 5.79a1.374 1.374 0 0 0-.012 1.936l1.246 1.258a1.374 1.374 0 0 0 1.936.012l5.352-5.352a1.374 1.374 0 0 0-.961-2.316zm-7.618 7.6a1.374 1.374 0 0 0-.961.438l-4.466 4.466a1.374 1.374 0 0 0 0 1.944l9.82 9.82a1.374 1.374 0 0 0 1.944 0l4.466-4.466a1.374 1.374 0 0 0 0-1.944l-9.82-9.82a1.374 1.374 0 0 0-.983-.438zm6.541 3.8a1.374 1.374 0 0 0-.971.402l-3.266 3.266a1.374 1.374 0 0 0 0 1.944l3.266 3.266a1.374 1.374 0 0 0 1.944 0l3.266-3.266a1.374 1.374 0 0 0 0-1.944l-3.266-3.266a1.374 1.374 0 0 0-.973-.402z" fill="#FFA116"/>
+          </svg>
+        );
+
+      case 'codechef':
+        return (
+          <svg className={className} viewBox="0 0 24 24" fill="currentColor">
+            <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm1 14.5h-2V15h2v1.5zm0-3h-2V7h2v6.5z" fill="#5B4638"/>
+          </svg>
+        );
+
       case 'linkedin':
         return (
           <svg className={className} viewBox="0 0 24 24" fill="currentColor">

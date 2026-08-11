@@ -43,6 +43,24 @@ const Footer = () => {
             >
               <TechIcon name="linkedin" className="w-4 h-4 text-blue-600" />
             </a>
+            <a 
+              href="https://leetcode.com/u/0HmlnBA2pz/" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="LeetCode"
+              className="p-1.5 rounded-lg hover:bg-gray-200/60 dark:hover:bg-gray-800 transition-colors"
+            >
+              <TechIcon name="leetcode" className="w-4 h-4 text-amber-500" />
+            </a>
+            <a 
+              href="https://www.codechef.com/users/sasidhar_07" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              aria-label="CodeChef"
+              className="p-1.5 rounded-lg hover:bg-gray-200/60 dark:hover:bg-gray-800 transition-colors"
+            >
+              <TechIcon name="codechef" className="w-4 h-4 text-amber-700 dark:text-amber-500" />
+            </a>
           </div>
         </div>
 
