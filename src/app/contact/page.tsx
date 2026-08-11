@@ -1,66 +1,19 @@
 "use client";
 
-import { useState } from 'react';
-import { Mail, Phone, MapPin, Send, MessageSquare, Sparkles, CheckCircle2, Loader2 } from 'lucide-react';
+import { useState, useEffect, Suspense } from 'react';
+import { useSearchParams } from 'next/navigation';
+import { Mail, Phone, MapPin, Send, MessageSquare, Sparkles, CheckCircle2 } from 'lucide-react';
 import { TechIcon } from '@/components/TechIcons';
 
-export default function Contact() {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: ''
-  });
-
-  const [isSubmitting, setIsSubmitting] = useState(false);
+function ContactFormContent() {
+  const searchParams = useSearchParams();
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = async (e: React.FormEvent) => {
-    e.preventDefault();
-    setIsSubmitting(true);
-
-    try {
-      // Send directly to palurisaisasidhar@gmail.com via FormSubmit endpoint
-      const response = await fetch('https://formsubmit.co/ajax/palurisaisasidhar@gmail.com', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-          'Accept': 'application/json'
-        },
-        body: JSON.stringify({
-          name: formData.name,
-          email: formData.email,
-          message: formData.message,
-          _subject: `Portfolio Inquiry from ${formData.name}`
-        })
-      });
-
-      if (response.ok) {
-        setSubmitted(true);
-      } else {
-        // Fallback mailto trigger
-        triggerMailto();
-        setSubmitted(true);
-      }
-    } catch {
-      // Fallback mailto trigger
-      triggerMailto();
+  useEffect(() => {
+    if (searchParams.get('submitted') === 'true') {
       setSubmitted(true);
-    } finally {
-      setIsSubmitting(false);
     }
-  };
-
-  const triggerMailto = () => {
-    const { name, email, message } = formData;
-    const subject = `Portfolio Inquiry from ${name}`;
-    const body = `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`;
-    const mailtoLink = `mailto:palurisaisasidhar@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
-    window.location.href = mailtoLink;
-  };
-
-  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
-    setFormData({ ...formData, [e.target.id]: e.target.value });
-  };
+  }, [searchParams]);
 
   return (
     <div className="max-w-6xl mx-auto py-12 px-4 sm:px-6">
@@ -164,27 +117,32 @@ export default function Contact() {
               </div>
               <h4 className="text-xl font-bold text-gray-900 dark:text-white">Message Sent Successfully!</h4>
               <p className="text-sm text-gray-600 dark:text-gray-300 leading-relaxed">
-                Thank you <strong className="text-gray-900 dark:text-white">{formData.name}</strong>! Your message has been sent directly to <span className="font-semibold text-blue-600 dark:text-cyan-400">palurisaisasidhar@gmail.com</span>. I will respond to your email address shortly.
+                Thank you! Your message has been sent directly to <span className="font-semibold text-blue-600 dark:text-cyan-400">palurisaisasidhar@gmail.com</span>. I will respond to your email as soon as possible.
               </p>
               <button
-                onClick={() => {
-                  setSubmitted(false);
-                  setFormData({ name: '', email: '', message: '' });
-                }}
+                onClick={() => setSubmitted(false)}
                 className="mt-2 text-xs font-bold text-blue-600 dark:text-cyan-400 hover:underline"
               >
                 Send Another Message &rarr;
               </button>
             </div>
           ) : (
-            <form className="space-y-5" onSubmit={handleSubmit}>
+            <form 
+              action="https://formsubmit.co/palurisaisasidhar@gmail.com" 
+              method="POST" 
+              className="space-y-5"
+            >
+              {/* FormSubmit Configuration Settings */}
+              <input type="hidden" name="_subject" value="New Portfolio Inquiry for Sai Sasidhar!" />
+              <input type="hidden" name="_template" value="table" />
+              <input type="hidden" name="_next" value="https://portfolio-01-ten-bice.vercel.app/contact?submitted=true" />
+
               <div>
                 <label htmlFor="name" className="block text-xs font-bold uppercase tracking-wider text-gray-600 dark:text-gray-400 mb-2">Your Name</label>
                 <input 
                   type="text" 
+                  name="name"
                   id="name" 
-                  value={formData.name}
-                  onChange={handleChange}
                   className="w-full px-4 py-3.5 rounded-xl bg-white/70 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors" 
                   placeholder="e.g. Alex Rivera" 
                   required 
@@ -195,9 +153,8 @@ export default function Contact() {
                 <label htmlFor="email" className="block text-xs font-bold uppercase tracking-wider text-gray-600 dark:text-gray-400 mb-2">Your Email</label>
                 <input 
                   type="email" 
+                  name="email"
                   id="email" 
-                  value={formData.email}
-                  onChange={handleChange}
                   className="w-full px-4 py-3.5 rounded-xl bg-white/70 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors" 
                   placeholder="alex@company.com" 
                   required 
@@ -207,10 +164,9 @@ export default function Contact() {
               <div>
                 <label htmlFor="message" className="block text-xs font-bold uppercase tracking-wider text-gray-600 dark:text-gray-400 mb-2">Message</label>
                 <textarea 
+                  name="message"
                   id="message" 
                   rows={4} 
-                  value={formData.message}
-                  onChange={handleChange}
                   className="w-full px-4 py-3.5 rounded-xl bg-white/70 dark:bg-gray-800/60 border border-gray-200 dark:border-gray-700 text-gray-900 dark:text-white text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors resize-none" 
                   placeholder="Let's discuss a role or project..." 
                   required
@@ -219,20 +175,10 @@ export default function Contact() {
 
               <button 
                 type="submit" 
-                disabled={isSubmitting}
-                className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 shadow-lg shadow-blue-500/25 hover:scale-[1.01] disabled:opacity-50 disabled:cursor-not-allowed"
+                className="w-full inline-flex items-center justify-center gap-2 bg-gradient-to-r from-blue-600 to-cyan-500 hover:from-blue-700 hover:to-cyan-600 text-white font-bold py-4 px-8 rounded-2xl transition-all duration-300 shadow-lg shadow-blue-500/25 hover:scale-[1.01]"
               >
-                {isSubmitting ? (
-                  <>
-                    <Loader2 className="w-4 h-4 animate-spin" />
-                    Sending Message...
-                  </>
-                ) : (
-                  <>
-                    <Send className="w-4 h-4" />
-                    Send Message
-                  </>
-                )}
+                <Send className="w-4 h-4" />
+                Send Message
               </button>
             </form>
           )}
@@ -240,5 +186,13 @@ export default function Contact() {
 
       </div>
     </div>
+  );
+}
+
+export default function Contact() {
+  return (
+    <Suspense fallback={<div className="text-center py-20 text-gray-500">Loading Contact...</div>}>
+      <ContactFormContent />
+    </Suspense>
   );
 }
