@@ -125,6 +125,65 @@ export const TechIcon: React.FC<TechIconProps> = ({ name, className = "w-5 h-5",
           </svg>
         );
 
+      case 'typescript':
+      case 'ts':
+        return (
+          <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="24" height="24" rx="4" fill="#3178C6"/>
+            <path d="M1.5 1.5h21v21h-21z" fill="none"/>
+            <path d="M13.7 18.2c.4.3.9.5 1.6.5 1 0 1.6-.5 1.6-1.3 0-.8-.5-1.1-1.7-1.6-1.5-.6-2.5-1.3-2.5-2.8 0-1.7 1.4-2.9 3.6-2.9 1.1 0 2.1.3 2.7.8l-.8 1.4c-.5-.4-1.2-.6-1.9-.6-.9 0-1.4.4-1.4 1 0 .7.5 1 1.7 1.5 1.7.7 2.5 1.4 2.5 2.9 0 1.9-1.5 3-3.9 3-1.3 0-2.4-.3-3.2-1l.7-1.4zM7.5 10.2h5.1v1.6H10.1v8.1H8.3v-8.1H5.8v-1.6h1.7z" fill="#FFFFFF"/>
+          </svg>
+        );
+
+      case 'scikit-learn':
+      case 'scikit-learn & nlp':
+      case 'ml':
+        return (
+          <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="10" fill="#F7931E"/>
+            <path d="M12 6v12M6 12h12" stroke="#FFFFFF" strokeWidth="2.5"/>
+          </svg>
+        );
+
+      case 'flask':
+        return (
+          <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M9 3h6v2h-1v4.5l4.3 7.2c.8 1.4-.2 3.3-1.8 3.3H7.5c-1.6 0-2.6-1.9-1.8-3.3L10 9.5V5H9V3z" stroke="#000000" strokeWidth="1.5" fill="none"/>
+          </svg>
+        );
+
+      case 'onnx':
+        return (
+          <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="12" cy="12" r="9" stroke="#005596" strokeWidth="2"/>
+            <path d="M9 12l2 2 4-4" stroke="#005596" strokeWidth="2"/>
+          </svg>
+        );
+
+      case 'nmap':
+      case 'security':
+        return (
+          <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 2L3 7v6c0 5.55 3.84 10.74 9 12 5.16-1.26 9-6.45 9-12V7l-9-5z" fill="#0284C7"/>
+          </svg>
+        );
+
+      case 'sqlite':
+        return (
+          <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M4 6c0-1.66 3.58-3 8-3s8 1.34 8 3v12c0 1.66-3.58 3-8 3s-8-1.34-8-3V6z" stroke="#003B57" strokeWidth="1.5"/>
+            <path d="M4 12c0 1.66 3.58 3 8 3s8-1.34 8-3" stroke="#003B57" strokeWidth="1.5"/>
+          </svg>
+        );
+
+      case 'qdrant':
+        return (
+          <svg className={className} viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect width="20" height="20" x="2" y="2" rx="5" fill="#DC2626"/>
+            <circle cx="12" cy="12" r="5" fill="#FFFFFF"/>
+          </svg>
+        );
+
       case 'linkedin':
         return (
           <svg className={className} viewBox="0 0 24 24" fill="currentColor">

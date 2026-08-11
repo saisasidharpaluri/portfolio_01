@@ -80,12 +80,16 @@ export default function Resume() {
         {/* Projects */}
         <div className="mb-10">
           <h3 className="text-lg font-extrabold uppercase tracking-wider text-blue-600 dark:text-cyan-400 mb-4 flex items-center gap-2 border-b border-gray-200/60 dark:border-gray-800/60 pb-2">
-            <Code className="w-5 h-5" /> Flagship Projects
+            <Code className="w-5 h-5" /> Flagship Open-Source Projects
           </h3>
           
           <div className="mb-6">
             <div className="flex flex-col sm:flex-row sm:justify-between items-baseline mb-1">
-              <h4 className="text-base font-bold text-gray-900 dark:text-white">Multimodal Vision RAG Engine & Distributed AI Search Pipeline</h4>
+              <h4 className="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                <a href="https://github.com/saisasidharpaluri/vision-rag-engine" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">
+                  Multimodal Vision RAG Engine & Search Pipeline 🔗
+                </a>
+              </h4>
               <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">July 2026</span>
             </div>
             <p className="text-xs font-bold text-blue-600 dark:text-cyan-400 mb-2">Python, PyTorch, vLLM, Qdrant, FastAPI, Next.js, Celery, Redis, PyMuPDF</p>
@@ -99,7 +103,11 @@ export default function Resume() {
 
           <div className="mb-6">
             <div className="flex flex-col sm:flex-row sm:justify-between items-baseline mb-1">
-              <h4 className="text-base font-bold text-gray-900 dark:text-white">High-Throughput AI Inference & Quantization Engine</h4>
+              <h4 className="text-base font-bold text-gray-900 dark:text-white flex items-center gap-2">
+                <a href="https://github.com/saisasidharpaluri/nexus-engine" target="_blank" rel="noopener noreferrer" className="hover:text-blue-600 dark:hover:text-cyan-400 transition-colors">
+                  High-Throughput AI Inference & Quantization Engine (nexus-engine) 🔗
+                </a>
+              </h4>
               <span className="text-xs font-semibold text-gray-500 dark:text-gray-400">Aug 2026</span>
             </div>
             <p className="text-xs font-bold text-blue-600 dark:text-cyan-400 mb-2">C++, Python, TensorRT, CUDA, FastAPI, gRPC, Docker, ONNX</p>
@@ -107,7 +115,6 @@ export default function Resume() {
               <li>Engineered a high-performance C++/Python AI model serving framework leveraging TensorRT and ONNX IR to deploy quantized deep learning models (INT8/FP16) with 3.2× lower latency (80ms → 25ms).</li>
               <li>Architected thread-safe dynamic batching async request queues in C++ and asyncio, boosting GPU compute utilization by 55% and scaling server throughput to 1,200+ requests/sec.</li>
               <li>Developed page-locked CUDA memory pools (cudaMallocHost) and IPC mechanisms to eliminate page-fault overhead, achieving ultra-low latency Host-to-Device data transfers.</li>
-              <li>Constructed automated benchmark & evaluation pipelines measuring throughput (RPS), VRAM consumption, cosine similarity, and perplexity across model checkpoints.</li>
               <li>Designed FastAPI REST and gRPC binary RPC serving gateways equipped with live telemetry APIs (/v1/models/stats), health probes, and containerized Docker orchestration.</li>
             </ul>
           </div>
