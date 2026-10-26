@@ -4,7 +4,7 @@ A modern, responsive portfolio website built with **Next.js**, **Tailwind CSS**,
 
 ## Features
 
-- **🎨 Modern Design**: Clean UI with a dark/light mode toggle.
+- **🎨 Modern Design**: Responsive dark-only interface with a consistent palette.
 - **📱 Responsive**: Fully optimized for mobile, tablet, and desktop devices.
 - **⚡ Fast Performance**: Static site generation for lightning-fast load times.
 - **📝 Sections**:
@@ -19,7 +19,6 @@ A modern, responsive portfolio website built with **Next.js**, **Tailwind CSS**,
 - **Framework**: [Next.js 15+](https://nextjs.org/) (App Router)
 - **Styling**: [Tailwind CSS](https://tailwindcss.com/)
 - **Language**: [TypeScript](https://www.typescriptlang.org/)
-- **Theming**: [next-themes](https://github.com/pacocoursey/next-themes)
 
 ## Getting Started
 
