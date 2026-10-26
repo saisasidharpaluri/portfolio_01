@@ -5,44 +5,15 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { ThemeProvider } from "@/components/ThemeProvider";
 
-const geistSans = Geist({
-  variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
-  subsets: ["latin"],
-});
+const geistSans = Geist({ variable: "--font-geist-sans", subsets: ["latin"] });
+const geistMono = Geist_Mono({ variable: "--font-geist-mono", subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "My Portfolio",
-  description: "A showcase of my work and skills",
+  title: { default: "Sai Sasidhar Paluri — AI & Software Engineer", template: "%s | Sai Sasidhar Paluri" },
+  description: "Portfolio of Sai Sasidhar Paluri: AI engineering, inference systems, multimodal search, and software projects.",
+  openGraph: { title: "Sai Sasidhar Paluri — AI & Software Engineer", description: "AI engineering, inference systems, and practical software." },
 };
 
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="en" suppressHydrationWarning>
-      <body
-        className={`${geistSans.variable} ${geistMono.variable} antialiased text-gray-900 dark:text-gray-100 bg-white dark:bg-gray-900 transition-colors duration-300`}
-      >
-        <ThemeProvider
-            attribute="class"
-            defaultTheme="system"
-            enableSystem
-            disableTransitionOnChange
-          >
-          <Navbar />
-          <main className="pt-20 min-h-screen p-4">
-            {children}
-          </main>
-          <Footer />
-        </ThemeProvider>
-      </body>
-    </html>
-  );
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
+  return <html lang="en" suppressHydrationWarning><body className={`${geistSans.variable} ${geistMono.variable}`}><ThemeProvider attribute="class" defaultTheme="light" enableSystem disableTransitionOnChange><Navbar /><main>{children}</main><Footer /></ThemeProvider></body></html>;
 }
