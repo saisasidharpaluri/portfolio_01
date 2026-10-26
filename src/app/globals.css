@@ -6,7 +6,7 @@
   --font-mono: var(--font-geist-mono);
 }
 
-:root { --paper: #f4f3ec; --ink: #20251f; --muted: #73796e; --line: rgba(32,37,31,.14); --lime: #d8f36a; --card: #fffef9; --deep: #232922; }
+:root { --font-geist-sans: Arial, sans-serif; --font-geist-mono: Consolas, monospace; --paper: #f4f3ec; --ink: #20251f; --muted: #73796e; --line: rgba(32,37,31,.14); --lime: #d8f36a; --card: #fffef9; --deep: #232922; }
 .dark { --paper: #171b17; --ink: #f2f1e8; --muted: #a8afa1; --line: rgba(242,241,232,.15); --lime: #d8f36a; --card: #202620; --deep: #111511; }
 * { box-sizing: border-box; }
 html { scroll-behavior: smooth; scroll-padding-top: 95px; }

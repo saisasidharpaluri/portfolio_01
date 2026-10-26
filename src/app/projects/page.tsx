@@ -1,8 +1,9 @@
 "use client";
 
 import { useMemo, useState } from "react";
-import { ArrowUpRight, ExternalLink, Github, Search, SlidersHorizontal, X } from "lucide-react";
+import { ArrowUpRight, ExternalLink, Search, SlidersHorizontal, X } from "lucide-react";
 import { projects } from "@/data/projects";
+import { TechIcon } from "@/components/TechIcons";
 
 const categories = ["All work", ...Array.from(new Set(projects.map((project) => project.category)))];
 
@@ -51,7 +52,7 @@ export default function Projects() {
                 <ul className="project-details">{project.details.map((detail) => <li key={detail}>{detail}</li>)}</ul>
                 <div className="project-tags">{project.stack.map((tool) => <span key={tool}>{tool}</span>)}</div>
                 <div className="project-metrics">{project.metrics.map((metric) => <span key={metric}>{metric}</span>)}</div>
-                <div className="project-links"><a href={project.github} target="_blank" rel="noreferrer"><Github size={16} /> Source code <ArrowUpRight size={14} /></a>{project.demo && <a href={project.demo} target="_blank" rel="noreferrer"><ExternalLink size={15} /> Live demo <ArrowUpRight size={14} /></a>}</div>
+                <div className="project-links"><a href={project.github} target="_blank" rel="noreferrer"><TechIcon name="github" className="w-4 h-4" /> Source code <ArrowUpRight size={14} /></a>{project.demo && <a href={project.demo} target="_blank" rel="noreferrer"><ExternalLink size={15} /> Live demo <ArrowUpRight size={14} /></a>}</div>
               </div>
             </article>
           ))}

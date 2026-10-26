@@ -1,7 +1,8 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowDownRight, ArrowRight, ArrowUpRight, Github, Linkedin, MapPin, MoveUpRight } from "lucide-react";
+import { ArrowDownRight, ArrowRight, ArrowUpRight, MapPin, MoveUpRight } from "lucide-react";
 import { projects } from "@/data/projects";
+import { TechIcon } from "@/components/TechIcons";
 
 const featured = projects.slice(0, 3);
 
@@ -55,7 +56,7 @@ export default function Home() {
                 <div className="project-topline"><span>{project.eyebrow}</span><span>0{index + 1}</span></div>
                 <h3><Link href={`/projects#${project.id}`}>{project.title}</Link></h3>
                 <p>{project.summary}</p>
-                <div className="project-card-bottom"><div className="mini-tags">{project.stack.slice(0, 3).map((tag) => <span key={tag}>{tag}</span>)}</div><a href={project.github} target="_blank" rel="noreferrer" aria-label={`${project.title} on GitHub`}><Github size={17} /></a></div>
+                <div className="project-card-bottom"><div className="mini-tags">{project.stack.slice(0, 3).map((tag) => <span key={tag}>{tag}</span>)}</div><a href={project.github} target="_blank" rel="noreferrer" aria-label={`${project.title} on GitHub`}><TechIcon name="github" className="w-4 h-4" /></a></div>
               </div>
             </article>
           ))}
@@ -70,7 +71,7 @@ export default function Home() {
 
       <section className="closing-cta">
         <div><p className="section-kicker">Want the details?</p><h2>Choose the version<br />that fits the role.</h2></div>
-        <div className="closing-actions"><Link href="/resume" className="button button-lime">Browse my resumes <ArrowRight size={16} /></Link><div className="social-inline"><a href="https://github.com/saisasidharpaluri" target="_blank" rel="noreferrer"><Github size={17} /> GitHub</a><a href="https://www.linkedin.com/in/sai-sasidhar-paluri-896b43289/" target="_blank" rel="noreferrer"><Linkedin size={17} /> LinkedIn</a></div></div>
+        <div className="closing-actions"><Link href="/resume" className="button button-lime">Browse my resumes <ArrowRight size={16} /></Link><div className="social-inline"><a href="https://github.com/saisasidharpaluri" target="_blank" rel="noreferrer"><TechIcon name="github" className="w-4 h-4" /> GitHub</a><a href="https://www.linkedin.com/in/sai-sasidhar-paluri-896b43289/" target="_blank" rel="noreferrer"><TechIcon name="linkedin" className="w-4 h-4" /> LinkedIn</a></div></div>
       </section>
     </div>
   );
